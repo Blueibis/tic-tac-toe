@@ -3,7 +3,7 @@
   font-family: helvetica, sans-serif;
 }
 body {
-  background-color: rgb(176, 176, 176);
+  background-color: white;
 }
 p {
   font-size: 30px;
@@ -30,7 +30,7 @@ p {
   vertical-align: top;
   margin-bottom: 4px;
   position: relative;
-  background-color: white;
+  background-color: rgba(230, 230, 230, 1);
 }
 .top {
   margin-top: 4px;
@@ -51,12 +51,36 @@ p {
   position: fixed;
   top: 30%;
   left: 28%;
+  /*border: 5px solid rgb(142, 203, 197);
+  background-color: white;
+  padding: 1em;*/
+}
+.introtext {
+  border-bottom: 3px solid rgb(142, 203, 197);
 }
 .greeting {
   padding-left: 7em;
   margin-bottom: 1em;
+  border-bottom: 5px solid rgb(142, 203, 197);
 }
-.yesno, .no {
+.yesno {
   padding-left: 5.6em;
   margin-top: 1em;
+  border-bottom: 1px solid rgb(142, 203, 197);
+}
+.no {
+  padding-left: 6em;
+}
+.end {
+  border-bottom: 3px solid rgb(142, 203, 197);
+  position: fixed;
+  top: 13%;
+  left: 35%;
+}
+.esc {
+  position: fixed;
+  top: 82%;
+  left:35%;
+  font-size: 16px;
+  border-bottom: 1px solid rgb(142, 203, 197);
 }
