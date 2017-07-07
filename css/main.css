@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+}
+body {
+  background-color: rgb(176, 176, 176);
+}
+p {
+  font-size: 30px;
+  color: rgb(50, 50, 50);
+  margin: 0;
+}
+.container {
+  margin: auto;
+}
+.board {
+  display: none;
+  border: 3px solid rgb(105, 177, 193);
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  background-color: rgb(99, 99, 99);
+}
+.ttt {
+  border: 1px solid rgb(117, 117, 117);
+  display: inline-block;
+  width: 32%;
+  height: 50px;
+  padding: 70px 20px 50px 20px;
+  vertical-align: top;
+  margin-bottom: 4px;
+  position: relative;
+  background-color: white;
+}
+.top {
+  margin-top: 4px;
+}
+
+.left {
+  margin-left: 4px;
+}
+.ttt span {
+  font-size: 100px;
+  position: absolute;
+  left: 22%;
+  bottom: 10%;
+  line-height: 100px;
+  color: rgb(131, 183, 190);
+}
+.intro {
+  position: fixed;
+  top: 30%;
+  left: 28%;
+}
+.greeting {
+  padding-left: 7em;
+  margin-bottom: 1em;
+}
+.yesno, .no {
+  padding-left: 5.6em;
+  margin-top: 1em;
+}
