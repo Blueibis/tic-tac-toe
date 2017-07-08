@@ -9,6 +9,8 @@ var back = document.querySelector('.esc')
 var turn = '<span>X</span>'
 var moves = 0
 var checkArray = []
+var xWin = 0
+var yWin = 0
 
 function nextTurn(field) {
   turn = turn === '<span>X</span>' ? '<span>O</span>' : '<span>X</span>';
@@ -18,12 +20,16 @@ function clickOff(field) {
 }
 function gameWin() {
   moves = 0;
+  xWin++;
+  back.innerHTML = '<p class="esc">esc to back<span class="stat">X:</span><span class="statnum">' + xWin + '</span><span class="stat">Y:</span><span class="statnum">' + yWin + '</span></p>'
   outro.innerHTML = '<p class="end">You Won!!!</p>'
   outro.style.display = 'block';
   fields.forEach(clickOff);
 }
 function gameLose() {
   moves = 0;
+  yWin++;
+  back.innerHTML = '<p class="esc">esc to back<span class="stat">X:</span><span class="statnum">' + xWin + '</span><span class="stat">Y:</span><span class="statnum">' + yWin + '</span></p>'
   outro.innerHTML = '<p class="end">Crushing defeat...</p>'
   outro.style.display = 'block';
   fields.forEach(clickOff);
@@ -51,12 +57,12 @@ window.addEventListener('keyup', function(e) {
       if (game.style.display === 'none') {
         fields.forEach(clickOff);
         fields.forEach(addClick);
+        turn = '<span>X</span>';
       }
         game.style.display = 'block';
         back.style.display = 'block';
-        back.innerHTML = '<p class="esc">esc to back</p>'
+        back.innerHTML = '<p class="esc">esc to back<span class="stat">X:</span><span class="statnum">' + xWin + '</span><span class="stat">Y:</span><span class="statnum">' + yWin + '</span></p>'
         intro.style.display = 'none';
-
         break;
     case 78: //n
       intro.style.display = 'block';
@@ -82,6 +88,7 @@ window.addEventListener('keyup', function(e) {
 game.addEventListener('click', function(e) {
   var target = e.target;
   var targetClass = target.className;
+  target.removeEventListener('click', myMove);
   checkEnd(targetClass);
 
   function getCheck(field) {

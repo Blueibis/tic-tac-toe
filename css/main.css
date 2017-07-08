@@ -80,7 +80,13 @@ p {
 .esc {
   position: fixed;
   top: 82%;
-  left:35%;
+  left: 35%;
   font-size: 16px;
   border-bottom: 1px solid rgb(142, 203, 197);
+}
+.stat {
+  padding-left: 7.4em;
+  font-size: 20px;
+  font-weight: bold;
+
 }
